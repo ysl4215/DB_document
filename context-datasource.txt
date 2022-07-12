@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+    
+      
+	<!--  <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+    	<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://52.194.186.83:3306/spdb"/>
+        <property name="username" value="spdb"/>
+        <property name="password" value="spdb0409!@#"/>
+        <property name="validationQuery" value="select 1 from dual" />
+        <property name="testWhileIdle" value="true"/>
+        <property name="timeBetweenEvictionRunsMillis" value="7200000"/>
+    </bean>  -->
+    
+    
+    <!-- mysql --> 
+<!-- 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+		<property name="url" value="jdbc:mysql://13.124.21.142:3306/spdb?autoReconnection=true"/>
+		<property name="username" value="spdb"/>
+		<property name="password" value="spdb0409!@#"/>
+		<property name="validationQuery" value="select 1 from dual" />
+		<property name="testWhileIdle" value="true"/>
+		<property name="timeBetweenEvictionRunsMillis" value="7200000"/>
+	</bean> -->
+<!-- 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+		<property name="url" value="jdbc:mysql://13.231.198.29:3306/spdb?autoReconnection=true"/>
+		<property name="username" value="spdb"/>
+		<property name="password" value="spdb0409!@#"/>
+		<property name="validationQuery" value="select 1 from dual" />
+		<property name="testWhileIdle" value="true"/>
+		<property name="timeBetweenEvictionRunsMillis" value="7200000"/>
+	</bean> -->
+	<!-- mysql local -->
+	<!-- <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+		<property name="url" value="jdbc:mysql://127.0.0.1:3336/spdb2?autoReconnection=true"/>
+		<property name="username" value="spdb"/>
+		<property name="password" value="spdb0409!@#"/>
+		<property name="validationQuery" value="select 1 from dual" />
+		<property name="testWhileIdle" value="true"/>
+		<property name="timeBetweenEvictionRunsMillis" value="7200000"/>
+	</bean> -->
+
+
+	<!-- tibero -->
+	<!-- <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="driverClassName" value="com.tmax.tibero.jdbc.TbDriver"/>
+		<property name="url" value="jdbc:tibero:thin:@192.168.0.38:8629:tibero"/>
+		<property name="username" value="spdb"/>
+		<property name="password" value="spdb0409!@#"/>
+		<property name="validationQuery" value="select 1 from dual" />
+		<property name="testWhileIdle" value="true"/>
+		<property name="timeBetweenEvictionRunsMillis" value="7200000"/>
+	</bean> -->
+
+
+   	<!-- Oracle -->
+ <!--       <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+    	<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
+        <property name="url" value="jdbc:oracle:thin:@spdb2.crzqzivkjlfx.ap-northeast-2.rds.amazonaws.com:1521:orcl"/>
+        <property name="username" value="spdb2"/>
+        <property name="password" value="1234"/>
+        <property name="validationQuery" value="select 1 from dual" />
+        <property name="testWhileIdle" value="true"/>
+        <property name="timeBetweenEvictionRunsMillis" value="7200000"/>
+ 	   </bean>  --> 
+    
+	<!-- sql_server  내부-->
+<!-- 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+		<property name="url" value="jdbc:sqlserver://192.168.0.8:1443;DatabaseName=spdb"/>
+		<property name="username" value="spdb"/>
+		<property name="password" value="spdb0409!@#"/>
+	</bean> -->
+  
+  
+   <!-- sql_server  로칼-->
+<!--        <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+     <property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+     <property name="url" value="jdbc:sqlserver://127.0.0.1:1433;DatabaseName=spdb"/>
+     <property name="username" value="spdb"/>
+     <property name="password" value="spdb0409!@#"/>
+   </bean> -->    
+   
+     <!--    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+    	<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://127.0.0.1:3306/spdb?autoReconnection=true"/>
+        <property name="username" value="spdb"/>
+        <property name="password" value="spdb0409!@#"/>
+        <property name="validationQuery" value="select 1 from dual" />
+        <property name="testWhileIdle" value="true"/>
+        <property name="timeBetweenEvictionRunsMillis" value="7200000"/>
+    </bean>  -->
+	  
+    <!-- <bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+    	<property name="jndiName" value="java:/comp/env/jdbc/spdbDS"/>
+    </bean> -->
+    
+    <!-- JDBC-PostgreSQL -->
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="org.postgresql.Driver" />
+        <property name="url" value="jdbc:postgresql://localhost:5432/migration?autoReconnection=true"/>
+        <property name="username" value="postgres" />
+        <property name="password" value="root" />
+    </bean>
+
+</beans>
